@@ -1,4 +1,5 @@
 import React from 'react';
+import cssModule from './youtube-player.module.scss';
 
 const YoutubePlayer = (props) => {
   const autoplay = () => {
@@ -45,15 +46,18 @@ const YoutubePlayer = (props) => {
 
   return (
     <div style={{ width: props.width }}>
-      <iframe
-        title={props.titleKey}
-        src={`https://www.youtube.com/embed/${
-          props.youtubeId
-        }?autoplay=${autoplay()}&controls=${controls()}&loop=${loop()}&fs=${fullscreen()}&start=${start()}&end=${end()}`}
-        frameBorder='0'
-        allowFullScreen='allowFullScreen'
-        allow='autoplay'
-      />
+      <div className={cssModule.video}>
+        <iframe
+          title={props.titleKey}
+          className={cssModule.iframe}
+          src={`https://www.youtube.com/embed/${
+            props.youtubeId
+          }?autoplay=${autoplay()}&controls=${controls()}&loop=${loop()}&fs=${fullscreen()}&start=${start()}&end=${end()}`}
+          frameBorder='0'
+          allowFullScreen='allowFullScreen'
+          allow='autoplay'
+        />
+      </div>
     </div>
   );
 };
