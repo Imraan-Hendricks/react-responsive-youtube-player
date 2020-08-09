@@ -5,7 +5,10 @@ import YoutubePlayer from '../youtube-player/youtube-player';
 const VideoGallery = (props) => {
   return (
     <div className={cssModule.root}>
-      <h1>Youtube Video Gallery</h1>
+      <div className={cssModule.header}>
+        <h1>{props.title}</h1>
+        <p>{props.subHeading}</p>
+      </div>
       <div className={cssModule.gallery}>
         {props.videos.map((video) => (
           <div key={video.titleKey} className={cssModule.video}>

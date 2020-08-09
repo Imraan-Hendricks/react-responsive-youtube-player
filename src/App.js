@@ -5,6 +5,8 @@ const App = () => {
   return (
     <div>
       <VideoGallery
+        title={'Youtube Video Gallery'}
+        subHeading={'This is a sub heading'}
         videos={[
           { titleKey: 'uniqueKey1', youtubeId: 'kXYiU_JCYtU' },
           { titleKey: 'uniqueKey2', youtubeId: '1kz6hNDlEEg' },
