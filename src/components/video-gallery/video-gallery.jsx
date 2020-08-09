@@ -1,11 +1,12 @@
 import React from 'react';
+import cssModule from './video-gallery.module.scss';
 import YoutubePlayer from '../youtube-player/youtube-player';
 
 const VideoGallery = (props) => {
   return (
-    <div>
+    <div className={cssModule.root}>
       {props.videos.map((video) => (
-        <div key={video.titleKey}>
+        <div key={video.titleKey} className={cssModule.video}>
           <YoutubePlayer
             titleKey={video.titleKey}
             autoplay={false}
